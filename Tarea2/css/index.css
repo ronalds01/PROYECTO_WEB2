@@ -1,0 +1,735 @@
+/* ===== ESTILOS GENERALES ===== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+/* ===== EFECTOS DE TEXTO ===== */
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* ===== ESTILOS PARA EL INDEX (MENÚ PRINCIPAL) ===== */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+/* ===== ESTILOS PARA RETO 1 ===== */
+
+/* Header con imagen de fondo */
+header {
+    position: relative;
+    overflow: hidden;
+}
+
+header img {
+    filter: brightness(0.7);
+}
+
+/* Sección de contenido */
+.content-section {
+    padding: 1rem 0;
+}
+
+.content-section h2 {
+    color: #2c3e50;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-left: 4px solid #dc3545;
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.content-section p {
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+.content-section .lead {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+/* Botón personalizado */
+.btn-danger {
+    background: linear-gradient(45deg, #dc3545, #c82333);
+    border: none;
+    border-radius: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(220, 53, 69, 0.3);
+}
+
+.btn-danger:hover {
+    background: linear-gradient(45deg, #c82333, #a71e2a);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(220, 53, 69, 0.4);
+}
+
+/* Sección de imagen */
+.image-section img {
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.image-section img:hover {
+    transform: scale(1.02);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Para tablets */
+@media (max-width: 768px) {
+    .content-section h2 {
+        font-size: 2rem;
+        text-align: center;
+        border-left: none;
+        border-bottom: 4px solid #dc3545;
+        padding-left: 0;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .content-section {
+        text-align: center;
+        padding: 2rem 0;
+    }
+    
+    header h1 {
+        font-size: 2.5rem;
+    }
+    
+    header p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Para móviles (Samsung Galaxy S8+ y similares) */
+@media (max-width: 576px) {
+    .content-section h2 {
+        font-size: 1.75rem;
+        line-height: 1.2;
+    }
+    
+    .content-section p {
+        font-size: 1rem;
+        text-align: left;
+    }
+    
+    .content-section .lead {
+        font-size: 1.1rem;
+    }
+    
+    .btn-danger {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+    }
+    
+    header {
+        height: 300px;
+    }
+    
+    header img {
+        height: 300px;
+        object-fit: cover;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    header p {
+        font-size: 1rem;
+    }
+    
+    .py-5 {
+        padding: 3rem 0 !important;
+    }
+    
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* Para pantallas muy pequeñas */
+@media (max-width: 375px) {
+    .content-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    header h1 {
+        font-size: 1.75rem;
+    }
+    
+    .display-4 {
+        font-size: 1.75rem !important;
+    }
+}
+
+
+/* ===== ESTILOS PARA RETO 2 - HOSPITAL NEXUS ===== */
+
+/* Título principal del hospital */
+.hospital-title {
+    color: #2c3e50 !important;
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+/* Contenedor de servicios */
+.service-card {
+    padding: 2rem 1rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor de íconos */
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-icon {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(45deg, #ff7b2c, #ff9f55);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 25px rgba(255, 123, 44, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.service-icon:hover {
+    transform: scale(1.1);
+}
+
+.service-img {
+    width: 60px;
+    height: 60px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
+}
+
+/* Títulos de servicios */
+.service-title {
+    color: #ff7b2c;
+    font-weight: 700;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Descripción de servicios */
+.service-description {
+    color: #6c757d;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+    padding: 0 0.5rem;
+}
+
+/* Botón del hospital */
+.btn-hospital {
+    background: linear-gradient(45deg, #ff7b2c, #ff9f55);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(255, 123, 44, 0.4);
+}
+
+.btn-hospital:hover {
+    background: linear-gradient(45deg, #e55a00, #ff7b2c);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 123, 44, 0.5);
+    color: white;
+}
+
+/* ===== RESPONSIVE PARA RETO 2 ===== */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .hospital-title {
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+    }
+    
+    .service-icon {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .service-img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .service-title {
+        font-size: 1.2rem;
+    }
+    
+    .service-description {
+        font-size: 0.95rem;
+        text-align: center;
+    }
+}
+
+/* Móviles (Samsung Galaxy S8+ y similares) */
+@media (max-width: 576px) {
+    .hospital-title {
+        font-size: 2rem;
+        letter-spacing: 0.5px;
+        line-height: 1.2;
+    }
+    
+    .service-card {
+        padding: 1.5rem 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .service-icon {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .service-img {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .service-title {
+        font-size: 1.1rem;
+        line-height: 1.3;
+    }
+    
+    .service-description {
+        font-size: 0.9rem;
+        text-align: left;
+        padding: 0;
+    }
+    
+    .btn-hospital {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1rem;
+    }
+    
+    .py-5 {
+        padding: 2rem 0 !important;
+    }
+}
+
+/* Pantallas muy pequeñas */
+@media (max-width: 375px) {
+    .hospital-title {
+        font-size: 1.75rem;
+    }
+    
+    .service-icon {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .service-img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .service-title {
+        font-size: 1rem;
+    }
+    
+    .service-description {
+        font-size: 0.85rem;
+    }
+}
+
+/* ===== ESTILOS PARA RETO 3 ===== */
+
+/* Tarjetas interactivas */
+.interactive-card {
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.interactive-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Títulos de las tarjetas */
+.interactive-title {
+    color: #007bff;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+/* Descripción de las tarjetas */
+.interactive-description {
+    color: #6c757d;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Botón interactivo */
+.btn-interactive {
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+}
+
+.btn-interactive:hover {
+    background: linear-gradient(45deg, #0056b3, #004085);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 123, 255, 0.5);
+}
+
+/* ===== ESTILOS PARA RETO 4 ===== */
+
+/* Tarjetas deportivas */
+.sport-card {
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sport-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Íconos deportivos */
+.sport-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+}
+
+/* Títulos de las tarjetas */
+.sport-title {
+    color: #007bff;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+/* Descripción de las tarjetas */
+.sport-description {
+    color: #6c757d;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
+/* ===== ESTILOS PARA RETO 5 ===== */
+
+/* Sección de libros */
+.book-section {
+    padding: 0;
+}
+
+/* Tarjetas de libros */
+.book-card {
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Colores de fondo */
+.bg-red {
+    background-color: #dc3545;
+    color: white;
+}
+
+.bg-green {
+    background-color: #28a745;
+    color: white;
+}
+
+.bg-orange {
+    background-color: #fd7e14;
+    color: white;
+}
+
+/* Títulos de los libros */
+.book-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Autor del libro */
+.book-author {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+/* Descripción del libro */
+.book-description {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Para móviles */
+@media (max-width: 768px) {
+    .book-title {
+        font-size: 1.75rem;
+    }
+
+    .book-author {
+        font-size: 1rem;
+    }
+
+    .book-description {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* ===== ESTILOS PARA RETO 6 ===== */
+
+/* Banner con efectos */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background: url('../images/ranazul.jpg') no-repeat center center;
+    background-size: cover;
+    background-color: rgba(0, 0, 128, 0.5); /* Azul oscuro */
+    background-blend-mode: multiply;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Capa de superposición */
+.banner-overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Botones grandes */
+.btn-lg {
+    font-size: 1.25rem;
+    padding: 0.75rem 1.5rem;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Para móviles */
+@media (max-width: 768px) {
+    .banner {
+        height: 400px;
+    }
+
+    .display-3 {
+        font-size: 2.5rem;
+    }
+
+    .btn-lg {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+
+/* ===== ESTILOS PARA RETO 7 ===== */
+
+/* Contenedor de imágenes */
+figure {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto de hover */
+figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+figure:hover figcaption {
+    opacity: 1;
+}
+
+
+/* ===== ESTILOS PARA RETO 8 ===== */
+
+/* Banner con efectos */
+.banner {
+    position: relative;
+    padding-top: 50px;
+    width: 100%;
+    height: 500px;
+    background: url('../images/banner3.jpg') no-repeat center center;
+    background-size: cover;
+    background-color: rgba(0, 0, 128, 0.5); /* Azul oscuro */
+    background-blend-mode: multiply;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Capa de superposición */
+.banner-overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Botones grandes */
+.btn-lg {
+    font-size: 1.25rem;
+    padding: 0.75rem 1.5rem;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Para móviles */
+@media (max-width: 768px) {
+    .banner {
+        height: 400px;
+    }
+
+    .display-3 {
+        font-size: 2.5rem;
+    }
+
+    .btn-lg {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+
+/* ===== ESTILOS PARA RETO 9 ===== */
+
+/* Logotipos de instituciones */
+.institution-logo {
+    width: 100%;
+    max-width: 200px;
+    display: block;
+    margin: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.institution-logo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ===== ESTILOS PARA RETO 10 ===== */
+
+/* Tarjetas del blog */
+.blog-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Imágenes del blog */
+.blog-image {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 10px;
+}
+
+/* Botones grandes */
+.btn-lg {
+    font-size: 1.25rem;
+    padding: 0.75rem 1.5rem;
+}
+
+
+
+/*boton ScrollTop*/
+
+.botonScrollTop {
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background-color: #ffd433;
+    right: 30px;
+    bottom: 30px;
+    text-align: center;
+    line-height: 45px;
+    color: #000;
+    font-size: 45px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.botonScrollTop {
+    background-color: #fddb59;
+    right: 13px;
+}
+
