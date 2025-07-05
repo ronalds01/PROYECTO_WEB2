@@ -131,24 +131,6 @@ height: 50px;
 font-size: 1.2rem;
 }
 
-/* ELIMINAR COMPLETAMENTE ESTA TERCERA DEFINICIÓN (líneas 143-156) */
-/* .whatsapp-float {
-position: fixed;
-bottom: 20px;
-left: 20px;
-background-color: #25d366;
-color: white;
-font-size: 2rem;
-padding: 12px 14px;
-border-radius: 50%;
-z-index: 1000;
-box-shadow: 0 0 10px rgba(0,0,0,0.3);
-transition: transform 0.2s ease;
-}
-
-.whatsapp-float:hover {
-transform: scale(1.1);
-} */
 
 /* Estilos para el botón ScrollTop */
 .botonScrollTop {
