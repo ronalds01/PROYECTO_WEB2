@@ -1,0 +1,78 @@
+
+.tam1 img {
+    width: 650px;
+    height: 450px;
+}
+
+.tam2 img {
+    width: 450px;
+    height: 250px;
+}
+
+.tam3 img {
+    width: 450px;
+    height: 300px;
+}
+
+/* Extra Small devices (landscape phones, 576px and down) */
+@media (max-width: 575px) {
+body {
+    background-color: #78e0e5;
+}
+.tam3 img{
+    width: 250px;
+    height: 250px;
+}
+h1{
+    color: #fff;
+}
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+body {
+    background-color: #bfeb2b;
+}
+}
+
+
+/* MEdium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+body {
+    background-color: #c894cf;
+}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+body {
+    background-color: #c12855;
+}
+h1{
+    color: #fff;
+}
+}
+
+/* X-Large devices (large desktos, 1200px and up) */
+@media (min-width: 1200px) {
+body {
+    background-color: #cc7220;
+}
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {    
+body {
+    background-color: #ffffff;
+}
+h1{
+    color: #000;
+}
+}
+
+
+
+
+
+
+
