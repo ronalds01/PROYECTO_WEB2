@@ -1,0 +1,179 @@
+body {
+font-family: 'Arial', sans-serif;
+background-color: #111;
+color: #fff;
+margin: 0;
+padding: 0;
+}
+
+.banner {
+background-image: url('../images/wb3.jpg');
+background-size: cover;
+background-position: center;
+height: 100vh;
+padding: 3rem;
+}
+
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    text-decoration: none;
+}
+
+.whatsapp-float img {
+    width: 50px;
+    height: 50px;
+    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.3)); /* Sombra sutil */
+}
+
+#scrollTopBtn {
+position: fixed;
+bottom: 80px;
+right: 20px;
+display: none;
+}
+
+
+/* Estilos para recorrido */
+#recorrido h2 {
+color: #f5c518;
+font-weight: bold;
+}
+
+#recorrido p {
+font-size: 1.1rem;
+line-height: 1.6;
+}
+
+
+/* Estilos para el video-galería */
+#video-galeria h2 {
+color: #f5c518;
+font-weight: bold;
+}
+
+#video-galeria img {
+transition: transform 0.3s ease;
+}
+
+#video-galeria img:hover {
+transform: scale(1.05);
+}
+
+/* Estilos para el info-tour */
+#info-tour h2 {
+font-weight: bold;
+color: #222;
+}
+
+#info-tour button:hover {
+transform: scale(1.05);
+transition: transform 0.2s ease;
+}
+
+/* Estilos para el audio-intro */
+#audio-intro h2 {
+color: #f5c518;
+font-weight: bold;
+}
+
+#audio-intro button:hover {
+transform: scale(1.05);
+transition: transform 0.2s ease;
+}
+
+
+/* Estilos para el mapa */
+#mapa h2 {
+color: #222;
+font-weight: bold;
+}
+
+#mapa iframe {
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+
+/*Estilos para el formulario*/
+#suscripcion input,
+#suscripcion button {
+border-radius: 5px;
+padding: 12px;
+}
+
+#suscripcion button:hover {
+transform: scale(1.02);
+transition: 0.2s ease;
+}
+
+/* Estilos para el scrollTopBtn */
+#scrollTopBtn {
+bottom: 20px;
+right: 20px;
+z-index: 999;
+display: none;
+border-radius: 50%;
+width: 50px;
+height: 50px;
+font-size: 1.2rem;
+}
+
+/* ELIMINAR COMPLETAMENTE ESTA TERCERA DEFINICIÓN (líneas 143-156) */
+/* .whatsapp-float {
+position: fixed;
+bottom: 20px;
+left: 20px;
+background-color: #25d366;
+color: white;
+font-size: 2rem;
+padding: 12px 14px;
+border-radius: 50%;
+z-index: 1000;
+box-shadow: 0 0 10px rgba(0,0,0,0.3);
+transition: transform 0.2s ease;
+}
+
+.whatsapp-float:hover {
+transform: scale(1.1);
+} */
+
+/* Estilos para el botón ScrollTop */
+.botonScrollTop {
+position: fixed;
+bottom: 80px;
+right: 20px;
+background-color: #ffc107; 
+color: #000;
+width: 50px;
+height: 50px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.5rem;
+z-index: 999;
+box-shadow: 0 0 10px rgba(0,0,0,0.3);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+text-decoration: none;
+}
+
+.botonScrollTop:hover {
+transform: scale(1.1);
+box-shadow: 0 0 15px rgba(255, 193, 7, 0.5);
+color: #000;
+text-decoration: none;
+}
+
