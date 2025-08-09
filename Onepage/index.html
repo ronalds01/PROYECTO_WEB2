@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Warner Bros Studio Tour</title>
+<link rel="icon" href="images/faviconwb.png">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/index.css">
+<!-- Librería AOS: Animate On Scroll -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+
+</div>
+<body>
+
+    <!-- MENÚ DE NAVEGACIÓN RESPONSIVO -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio">
+    <img src="images/wb-logo.png" alt="Logo WB" width="40" height="40">
+    <span>WB Studio Tour</span>
+    </a>
+    <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+    
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#recorrido">Recorrido</a></li>
+        <li class="nav-item"><a class="nav-link" href="#video-galeria">Galería/Video</a></li>
+        <li class="nav-item"><a class="nav-link" href="#info-tour">Tour</a></li>
+        <li class="nav-item"><a class="nav-link" href="#audio-intro">Audio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#mapa">Ubicación</a></li>
+        <li class="nav-item"><a class="nav-link" href="#suscripcion">Contáctenos</a></li>
+    <!-- Submenú -->
+    <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="submenuDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Recursos
+    </a>
+    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="submenuDropdown">
+        <li><a class="dropdown-item" href="https://www.wbstudiotour.co.uk/" target="_blank">Sitio Oficial</a></li>
+        <li><a class="dropdown-item" href="https://www.youtube.com/@wizardingworld" target="_blank">Canal de YouTube</a></li>
+    </ul>
+    </li>
+
+    </ul>
+    </div>
+</div>
+</nav>
+
+<!-- ENCABEZADO / BANNER -->
+<header class="banner text-white text-center d-flex align-items-center justify-content-center" id="inicio">
+    <div>
+    <h1 class="texto-neon">Descubre la Magia de Warner Bros Studio Tour</h1>
+    <p class="texto-neon">Sumérgete en el mundo cinematográfico que marcó generaciones</p>
+    </div>
+</header>
+
+
+<!-- SECCIONES DE CONTENIDO -->
+<main>
+    <!-- Sección 1 Recorrido -->
+    <section class="container py-5" id="recorrido">
+<div class="row align-items-center">
+    <div class="col-md-6">
+    <img src="images/recorrido.jpg" alt="Recorrido del tour" class="img-fluid rounded shadow" data-aos="zoom-in">
+    </div>
+    <div class="col-md-6">
+    <h2 class="mb-4 titulo-turquesa" data-aos="fade-up">Explora los Estudios por Dentro</h2>
+
+    <p>
+        Vive una experiencia cinematográfica única mientras recorres los escenarios originales de tus películas favoritas. Desde el icónico set de Central Perk hasta los vestuarios y efectos especiales, cada rincón del tour te sumerge en la magia del cine.
+    </p>
+    <a href="#info-tour" class="btn btn-outline-light mt-3">Ver más detalles</a>
+
+    </div>
+</div>
+</section>
+
+    <!-- Sección 2 Historia -->
+    <section class="bg-light py-5" id="historia">
+<section class="bg-dark text-white py-5" id="video-galeria">
+<div class="container">
+    <h2 class="text-center mb-5 titulo-turquesa" data-aos="fade-up">Vive la Experiencia en Foto y Video</h2>
+    <div class="row">
+    <!-- Video MP4 -->
+    <div class="col-md-6 mb-4">
+        <video src="video/estudios_warner.mp4" class="w-100 rounded shadow" controls></video>
+    </div>
+
+<!-- Carrusel de galería -->
+<div class="col-md-6">
+<div id="galeriaCarousel" class="carousel slide" data-bs-interval="false">
+    <div class="carousel-inner rounded shadow">
+    <div class="carousel-item active">
+        <img src="images/galeria1.jpg" class="d-block w-100" alt="Set de filmación">
+    </div>
+    <div class="carousel-item">
+        <img src="images/galeria2.jpg" class="d-block w-100" alt="Escenografía mágica">
+    </div>
+    <div class="carousel-item">
+        <img src="images/galeria3.jpg" class="d-block w-100" alt="Tour guiado">
+    </div>
+    <div class="carousel-item">
+        <img src="images/galeria4.jpg" class="d-block w-100" alt="Vestuario original">
+    </div>
+    </div>
+
+    <!-- Controles personalizados -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#galeriaCarousel" data-bs-slide="prev">
+    <img src="images/flecha_izquierda.png" alt="Anterior" width="40">
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#galeriaCarousel" data-bs-slide="next">
+    <img src="images/flecha_derecha.png" alt="Siguiente" width="40">
+    </button>
+</div>
+</div>
+
+
+</section>
+
+<!-- Sección 3 Información del Tour -->
+<section class="py-5 bg-light text-dark" id="info-tour">
+<div class="container">
+    <h2 class="text-center mb-4">¿Qué puedes descubrir en el tour?</h2>
+    <div class="row text-center">
+    
+    <div class="col-md-4 mb-4">
+<div class="card h-100 shadow" data-aos="flip-left">
+    <div class="card-body text-center">
+    <h5 class="card-title"><i class="fas fa-video me-2"></i> Escenarios icónicos</h5>
+    <p class="card-text">Visita los sets originales de películas legendarias.</p>
+    <a href="#recorrido" class="btn btn-outline-primary">Ver Escenarios</a>
+    </div>
+</div>
+</div>
+
+    <div class="col-md-4 mb-4">
+<div class="card h-100 shadow" data-aos="flip-left">
+    <div class="card-body text-center">
+    <h5 class="card-title"><i class="fas fa-hat-wizard me-2"></i> Magia del cine</h5>
+    <p class="card-text">Descubre cómo se crean los efectos especiales.</p>
+    <a href="#video-galeria" class="btn btn-outline-success">Explorar Magia</a>
+    </div>
+</div>
+</div>
+
+    <div class="col-md-4 mb-4">
+<div class="card h-100 shadow" data-aos="flip-left">
+    <div class="card-body text-center">
+    <h5 class="card-title"><i class="fas fa-film me-2"></i> Detrás de cámaras</h5>
+    <p class="card-text">Conoce el trabajo de los equipos de producción.</p>
+    <a href="#video-galeria" class="btn btn-outline-warning">Ir al Backstage</a>
+    </div>
+</div>
+</div>
+
+
+        <div class="col-12 mt-4">
+        <a href="docs/folleto-tour.pdf" target="_blank" class="btn btn-danger btn-lg" data-aos="fade-up">
+        <i class="fas fa-file-pdf"></i> Descargar Folleto del Tour
+        </a>
+    </div>
+    </div>
+</div>
+</section>
+
+<!-- Sección 4 Audio Introducción -->
+<section class="py-5 bg-dark text-white text-center" id="audio-intro">
+<div class="container">
+    <h2 class="mb-4 titulo-turquesa" data-aos="fade-up">Escucha la Introducción del Tour</h2>
+    <p class="mb-3">Presiona el botón para escuchar una bienvenida especial que te guiará por la experiencia WB Studio Tour.</p>
+    
+    <audio id="audioBienvenida" src="audio/bienvenida.mp3"></audio>
+    <button class="btn btn-warning mt-3" onclick="document.getElementById('audioBienvenida').play()">
+    <i class="fas fa-volume-up"></i> Reproducir Audio
+    </button>
+</div>
+</section>
+
+<!-- Sección 5 Mapa -->
+<section class="py-5 bg-light text-dark" id="mapa">
+<div class="container">
+    <h2 class="text-center mb-4">Ubicación del Estudio</h2>
+    <p class="text-center mb-4">Encuentra el Warner Bros Studio Tour y planifica tu visita con anticipación.</p>
+    <div class="ratio ratio-16x9">
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.527716646273!2d-0.4181976842291739!3d51.6905689796644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487641e5f0c3e7e3%3A0x3b3f3a0b3b3f3a0b!2sWarner%20Bros.%20Studio%20Tour%20London!5e0!3m2!1ses!2scr!4v1680000000000!5m2!1ses!2scr" 
+        width="600" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+    </div>
+</div>
+</section>
+
+<!-- Sección 6 Contáctenos -->
+<section class="py-5 bg-dark text-white" id="suscripcion">
+<div class="container text-center">
+    <h2 class="mb-4">Contáctenos</h2>
+    <p class="mb-3">Puede seguirnos y escribirnos por nuestras redes sociales oficiales.</p>
+
+    <div class="d-flex justify-content-center gap-4 redes-sociales">
+    <a href="https://www.facebook.com/wbtourhollywood" target="_blank" title="Facebook">
+        <img src="images/facebooklogo.png" alt="Facebook" width="50" height="50">
+    </a>
+    <a href="https://www.instagram.com/wbtourlondon/" target="_blank" title="Instagram">
+        <img src="images/instagramlogo.png" alt="Instagram" width="50" height="50">
+    </a>
+    <a href="https://wa.me/50688888888" target="_blank" title="WhatsApp">
+        <img src="images/whatsapplogo.png" alt="WhatsApp" width="50" height="50">
+    </a>
+    </div>
+</div>
+</section>
+
+</main>
+
+<!-- PIE DE PÁGINA -->
+<footer class="bg-dark text-white p-4">
+<div class="container d-flex align-items-center justify-content-center gap-3 flex-wrap">
+    <img src="images/wb-logo.png" alt="Logo Warner Bros" width="50" height="50">
+    <p class="m-0">&copy; 2025 Warner Bros Studio Tour. Todos los derechos reservados.</p>
+</div>
+</footer>
+
+
+
+<!-- BOTÓN SCROLLTOP Y WHATSAPP -->
+<a href="#inicio">
+    <div class="botonScrollTop">
+        <img src="images/flecha_arriba.png" alt="Subir" width="30" height="30">
+    </div>
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Script AOS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init({
+    duration: 1200,
+    once: true
+});
+</script>
+
+</body>
+</html>
