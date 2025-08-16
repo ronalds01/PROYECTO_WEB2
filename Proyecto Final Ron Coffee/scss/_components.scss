@@ -1,0 +1,4 @@
+.rc-card { @include shadow-soft; border:0; border-radius: 1rem; overflow: hidden; }
+.rc-icon-card { border-radius: 1rem; background: #fff; @include shadow-soft; }
+.rc-icon { font-size: 2rem; }
+

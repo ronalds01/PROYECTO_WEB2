@@ -1,0 +1,114 @@
+/* ========== Header: logo responsive ========== */
+@media (min-width:576px){ .navbar-brand img{ height:42px; } }   /* sm */
+@media (min-width:768px){ .navbar-brand img{ height:46px; } }   /* md */
+@media (min-width:992px){ .navbar-brand img{ height:50px; } }   /* lg */
+@media (min-width:1200px){ .navbar-brand img{ height:56px; } }  /* xl */
+@media (min-width:1400px){ .navbar-brand img{ height:60px; } }  /* xxl */
+
+/* ========== Footer: sello (logo translúcido) ========== */
+/* Base: más pequeño y corrido a la izquierda */
+.rc-footer::before{
+  background-position: 28% center;
+  background-size: clamp(180px, 30vw, 360px);
+}
+
+/* XS: móvil pequeño */
+@media (max-width:575.98px){
+  .rc-footer::before{
+    background-position: 24% center;
+    background-size: 180px;
+  }
+}
+
+/* MD: tablets */
+@media (min-width:768px){
+  .rc-footer::before{
+    background-position: 26% center;
+    background-size: 300px;
+  }
+}
+
+/* LG: laptops */
+@media (min-width:992px){
+  .rc-footer::before{
+    background-position: 27% center;
+    background-size: 340px;
+  }
+}
+
+/* XL: desktops grandes */
+@media (min-width:1200px){
+  .rc-footer::before{
+    background-position: 30% center;
+    background-size: 400px;
+  }
+}
+
+/* XXL: pantallas muy anchas */
+@media (min-width:1400px){
+  .rc-footer::before{
+    background-position: 32% center;
+    background-size: 440px;
+  }
+}
+
+/* Móvil: un poco más bajo */
+@media (max-width: 575.98px){
+  #galeriaFull .carousel-item{ height: 56vh; }
+}
+/* Escritorio grande: un toque más alto */
+@media (min-width: 1200px){
+  #galeriaFull .carousel-item{ height: 60vh; }
+}
+
+
+/* ========== Footer: logo visible centrado (crece por breakpoint) ========== */
+@media (min-width:768px){  .footer-logo{ height: 90px; } }   /* md */
+@media (min-width:992px){  .footer-logo{ height:110px; } }   /* lg */
+@media (min-width:1200px){ .footer-logo{ height:130px; } }   /* xl */
+
+/* Móvil: un poco más bajo el slide, y flechas aún más pequeñas */
+@media (max-width: 575.98px){
+  #galeriaFull .carousel-item{ height: 56vh; }    /* si 70vh es mucho en móvil */
+  #galeriaFull .carousel-control-prev,
+  #galeriaFull .carousel-control-next{ width: 28px; height: 28px; }
+  #galeriaFull .rc-arrow{ width: 12px; height: 12px; }
+}
+
+/* Desktop grande: slide un poco más alto */
+@media (min-width: 1200px){
+  #galeriaFull .carousel-item{ height: 72vh; }    /* más alto en pantallas grandes */
+}
+
+@media (min-width: 992px){
+  .navbar .dropdown:hover .dropdown-menu{
+    display: block;
+    margin-top: 0;
+  }
+}
+
+
+/* Overlay para oscurecer el video de fondo */
+section[data-vide-bg] {
+  position: relative;
+  min-height: 100vh; /* ocupa toda la altura de pantalla */
+}
+
+section[data-vide-bg] .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.55); /* ajuste de opacidad */
+  z-index: 1;
+}
+
+section[data-vide-bg] .container {
+  position: relative;
+  z-index: 2; /* asegura que el contenido quede sobre el overlay */
+}
+
+/* Para que la lista sea legible en fondo oscuro */
+section[data-vide-bg] .list-group-item {
+  background: rgba(255,255,255,0.85); /* semitransparente */
+  color: #000;
+  font-weight: 500;
+}

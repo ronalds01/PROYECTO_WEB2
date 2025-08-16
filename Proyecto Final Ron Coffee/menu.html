@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menú</title>
+
+<!-- Favicón -->
+<link rel="icon" type="image/png" href="assets/icons/faviconRC.png">
+<!-- Favicons -->
+<link rel="icon" type="image/png" sizes="16x16"  href="assets/icons/favicon-16.png?v=1">
+<link rel="icon" type="image/png" sizes="32x32"  href="assets/icons/favicon-32.png?v=1">
+<link rel="icon" type="image/png" sizes="48x48"  href="assets/icons/favicon-48.png?v=1">
+<link rel="icon" type="image/png" sizes="64x64"  href="assets/icons/favicon-64.png?v=1">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/icons/favicon-180.png?v=1">
+<link rel="shortcut icon" type="image/png" href="assets/icons/favicon-32.png?v=1">
+
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Bootstrap y estilos -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/reglas.css">
+
+<!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+<div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+    <img src="assets/imagenes/brand/logoRC.png" alt="Ron Coffee" height="40">
+
+    <span>Ron Coffee</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navRC">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navRC">
+    <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+        <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="menu.html" id="navMenu"
+    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Menú
+  </a>
+  <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navMenu">
+    <!-- Como ya estás en menu.html, usa anclas locales -->
+    <li><a class="dropdown-item" href="#opciones">Opciones</a></li>
+    <!-- Ejemplos por si luego agregas más secciones
+    <li><a class="dropdown-item" href="#bebidas">Bebidas</a></li>
+    <li><a class="dropdown-item" href="#postres">Postres</a></li>
+    -->
+  </ul>
+</li>
+        <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
+        <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link" href="evento.html">Eventos</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+    </ul>
+    </div>
+</div>
+</nav>
+
+
+<!-- HEADER -->
+
+<main class="mt-5 pt-5">
+  
+  <section class="container pt-5 pb-4">
+    <h1 class="mb-4">Menú</h1>
+    
+
+    <!-- Tabla de precios -->
+    <div id="opciones" class="table-responsive mb-5" data-aos="fade-up">
+      <table class="table table-striped align-middle">
+        <thead class="table-dark">
+          <tr><th>Producto</th><th>Tamaño</th><th>Precio</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Espresso</td><td>Simple</td><td>₡1,500</td></tr>
+          <tr><td>Capuccino</td><td>Mediano</td><td>₡2,300</td></tr>
+          <tr><td>Cold Brew</td><td>Grande</td><td>₡2,800</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Catálogo (cards) -->
+    <div class="row g-4" data-aos="fade-up">
+      <div class="col-sm-6 col-lg-4">
+        <div class="card rc-card h-100">
+          <img src="assets/imagenes/menu/espresso.jpg" class="card-img-top" alt="Espresso">
+          <div class="card-body">
+            <h5 class="card-title">Espresso</h5>
+            <p class="card-text">Shot intenso de café.</p>
+            <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#modalEspresso">Detalles</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        <div class="card rc-card h-100">
+          <img src="assets/imagenes/menu/capuccino.jpg" class="card-img-top" alt="Capuccino">
+          <div class="card-body">
+            <h5 class="card-title">Capuccino</h5>
+            <p class="card-text">Espuma cremosa perfecta.</p>
+            <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#modalCapuccino">Detalles</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        <div class="card rc-card h-100">
+          <img src="assets/imagenes/menu/coldbrew.jpg" class="card-img-top" alt="Cold Brew">
+          <div class="card-body">
+            <h5 class="card-title">Cold Brew</h5>
+            <p class="card-text">Extracción en frío 12h.</p>
+            <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#modalColdBrew">Detalles</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal (Bootstrap) -->
+    <div class="modal fade" id="modalEspresso" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog"><div class="modal-content">
+        <div class="modal-header"><h5 class="modal-title">Espresso</h5>
+          <button class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">Notas de chocolate oscuro y avellana.</div>
+        <div class="modal-footer"><button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button></div>
+      </div></div>
+    </div>
+    <div class="modal fade" id="modalCapuccino" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog"><div class="modal-content">
+        <div class="modal-header"><h5 class="modal-title">Capuccino</h5>
+          <button class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">Espresso + leche vaporizada y espuma.</div>
+        <div class="modal-footer"><button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button></div>
+      </div></div>
+    </div>
+    <div class="modal fade" id="modalColdBrew" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog"><div class="modal-content">
+        <div class="modal-header"><h5 class="modal-title">Cold Brew</h5>
+          <button class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">Suave, menos ácido, refrescante.</div>
+        <div class="modal-footer"><button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button></div>
+      </div></div>
+    </div>
+  </section>
+</main>
+
+
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white py-5 rc-footer">
+  <div class="container text-center">
+    <img src="assets/imagenes/brand/logoRC.png" alt="Ron Coffee" class="footer-logo mb-3">
+    <p class="m-0">&copy; 2025 Ron Coffee. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 900, once: true });
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>

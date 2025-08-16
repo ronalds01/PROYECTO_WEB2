@@ -1,0 +1,32 @@
+.navbar-brand span { font-family: $font-headings; font-weight: 700; }
+footer { border-top: 1px solid rgba(0,0,0,.08); }
+
+.rc-divisor {
+  background: linear-gradient(135deg, $rc-rojo, $rc-dorado);
+  clip-path: polygon(0 0,100% 10%,100% 100%,0 90%);
+}
+
+/* Footer con sello (un solo bloque) */
+.rc-footer{ position: relative; overflow: hidden; }
+.rc-footer::before{
+  content:"";
+  position:absolute; inset:0;
+  background-image: url("../assets/imagenes/brand/logoRC.png"); /* ruta desde /css */
+  background-repeat: no-repeat;
+  background-position: 28% center;               /* desplazado a la izquierda */
+  background-size: clamp(180px, 30vw, 360px);    /* más pequeño */
+  opacity:.10;
+  filter: grayscale(1) saturate(0) invert(1) brightness(1.1);
+  pointer-events:none;
+  z-index:0;
+}
+.rc-footer > .container{ position: relative; z-index: 1; }
+
+/* Logo visible del footer (centrado) */
+.footer-logo{
+  display:inline-block;
+  height: 72px;         /* tamaño base en móvil */
+  width: auto;          /* evita ovalados */
+  object-fit: contain;  /* sin estirar */
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,.35));
+}

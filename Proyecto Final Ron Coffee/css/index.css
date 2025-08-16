@@ -1,0 +1,237 @@
+/* Logo translúcido y grisáceo en el footer */
+.rc-footer {
+  
+  overflow: hidden;
+}
+.rc-footer::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 220px;
+  height: 220px;
+  background: url('assets/imagenes/brand/logoRC.png') no-repeat center/contain;
+  opacity: 0.13;
+  filter: grayscale(1) brightness(1.8);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.rc-banner-img-large {
+  max-height: 700px;
+}
+/* Banners apilados estilo Athanasiou */
+.rc-banner-stack {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.rc-banner-img {
+	max-height: 480px;
+	object-fit: cover;
+	border-radius: 16px;
+	box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+	transition: transform 0.4s cubic-bezier(.25,.8,.25,1), box-shadow 0.4s;
+	margin-bottom: 48px;
+}
+.rc-banner-img:hover {
+	transform: scale(1.03);
+	box-shadow: 0 16px 48px rgba(0,0,0,0.18);
+	z-index: 2;
+}
+/* Efecto de acercamiento en fotos del carrusel y video de galería */
+#galeriaFull .carousel-item img,
+.ratio iframe {
+	transition: transform 0.3s cubic-bezier(.25,.8,.25,1), box-shadow 0.3s;
+}
+#galeriaFull .carousel-item img:hover,
+.ratio iframe:hover {
+	transform: scale(1.04);
+	box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+	z-index: 2;
+}
+/* Efecto de acercamiento (zoom) en cards y tabla de precios del menú */
+.rc-card, .table-responsive {
+	transition: transform 0.3s cubic-bezier(.25,.8,.25,1), box-shadow 0.3s;
+}
+.rc-card:hover, .table-responsive:hover {
+	transform: scale(1.04);
+	box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+	z-index: 2;
+}
+/* Imagen 1 del carrusel galería: mostrar parte superior */
+#galeriaFull .carousel-item.active img[src*="1.jpg"] {
+	object-position: top center !important;
+}
+/* Carrusel de galería ajustes */
+.carousel-inner .carousel-item img {
+	height: 60vh; /* Estira la imagen verticalmente */
+	object-fit: cover; /* Recorta y ajusta la imagen para cubrir el área */
+}
+
+/* Ajuste para las primeras imágenes (1, 2, 3, 4) del carrusel */
+.carousel-inner .carousel-item:nth-child(-n+4) img {
+	object-position: top; /* Mueve la imagen hacia arriba */
+}
+
+/* Flechas del carrusel */
+.rc-arrow {
+	width: 40px !important;
+	height: 40px !important;
+}
+
+/* Ancla con margen para navbar fija */
+#opciones { scroll-margin-top: 90px; }
+
+
+
+
+/* ===== Galería — Flechas más grandes y visibles (override) ===== */
+#galeriaFull .carousel-control-prev,
+#galeriaFull .carousel-control-next{
+  width: 48px !important;          /* antes 28px */
+  height: 48px !important;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: rgba(0,0,0,.48);      /* más oscuro = más contraste */
+  box-shadow: 0 4px 16px rgba(0,0,0,.35);
+  border: 2px solid rgba(229,177,0,.85); /* aro dorado */
+  padding: 0;
+  line-height: 0;
+  display: flex; align-items: center; justify-content: center;
+  z-index: 5;
+}
+
+#galeriaFull .carousel-control-prev{ left: 12px !important; }
+#galeriaFull .carousel-control-next{ right: 12px !important; }
+
+/* Tamaño del PNG de flecha */
+#galeriaFull .carousel-control-prev img.rc-arrow,
+#galeriaFull .carousel-control-next img.rc-arrow{
+  width: 22px !important;           /* antes 12px */
+  height: 22px !important;
+  object-fit: contain;
+  display: block;
+  max-width: none;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,.6)) brightness(1.1);
+}
+
+/* Hover/focus para más presencia */
+#galeriaFull .carousel-control-prev:hover,
+#galeriaFull .carousel-control-next:hover{
+  background: rgba(0,0,0,.60);
+  transform: translateY(-50%) scale(1.06);
+}
+#galeriaFull .carousel-control-prev:focus-visible,
+#galeriaFull .carousel-control-next:focus-visible{
+  outline: 3px solid #e5b100;
+  outline-offset: 2px;
+}
+
+/* Móvil: un poco más pequeñas para no tapar contenido */
+@media (max-width:575.98px){
+  #galeriaFull .carousel-control-prev,
+  #galeriaFull .carousel-control-next{
+    width: 40px !important;
+    height: 40px !important;
+    border-width: 1.5px;
+  }
+  #galeriaFull .carousel-control-prev img.rc-arrow,
+  #galeriaFull .carousel-control-next img.rc-arrow{
+    width: 18px !important;
+    height: 18px !important;
+  }
+}
+
+/* Por si Bootstrap intenta meter sus iconos por defecto */
+#galeriaFull .carousel-control-prev .carousel-control-prev-icon,
+#galeriaFull .carousel-control-next .carousel-control-next-icon{
+  display: none !important;
+}
+
+
+/* ===== Sticky footer en todas las páginas ===== */
+html, body { height: 100%; }
+body { min-height: 100vh; display: flex; flex-direction: column; }
+main { flex: 1 0 auto; }              /* El contenido empuja el footer hacia abajo */
+footer.rc-footer { margin-top: auto; } /* El footer siempre toca el borde inferior */
+
+
+.uil{
+  font-size: 50px;
+}
+
+section[data-vide-bg] {
+  position: relative;
+  min-height: 80vh; /* altura del bloque */
+  z-index: 1;
+}
+
+section[data-vide-bg]::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.45); /* capa oscura */
+  z-index: 1;
+}
+
+section[data-vide-bg] > div {
+  position: relative;
+  z-index: 2; /* asegura que el texto esté encima */
+}
+
+
+
+
+
+
+
+
+
+/* ===== Scroll To Top (arriba de WhatsApp) ===== */
+#scrollTopBtn{
+  position: fixed;
+  right: 20px;
+  bottom: 88px; /* 56px del WhatsApp + 12px de separación + 20px margen */
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(0,0,0,.60);
+  border: 2px solid rgba(229,177,0,.85);
+  box-shadow: 0 4px 16px rgba(0,0,0,.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity .25s ease, transform .25s ease, visibility .25s ease, background .2s ease;
+  z-index: 1060; /* por encima del WhatsApp (1050) */
+}
+#scrollTopBtn img{
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,.6)) brightness(1.1);
+}
+#scrollTopBtn:hover{ background: rgba(0,0,0,.75); }
+#scrollTopBtn:focus-visible{
+  outline: 3px solid #e5b100;
+  outline-offset: 2px;
+}
+
+/* visible al hacer scroll */
+#scrollTopBtn.show{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Móvil: un toque más pequeño */
+@media (max-width:575.98px){
+  #scrollTopBtn{ width: 40px; height: 40px; bottom: 80px; }
+  #scrollTopBtn img{ width: 18px; height: 18px; }
+}
+

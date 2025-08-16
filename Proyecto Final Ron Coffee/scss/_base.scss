@@ -1,0 +1,13 @@
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body { font-family: $font-body; color: $rc-negro; }
+
+.rc-hero {
+position: relative; min-height: 86vh;
+background: radial-gradient(100% 100% at 50% 0%, alpha($rc-rojo,.15), transparent 60%),
+            linear-gradient(120deg, alpha($rc-dorado,.12), transparent 40%),
+            #1a1a1a url('../assets/imagenes/hero/hero.jpg') center/cover no-repeat;
+}
+.rc-hero__overlay { position: absolute; inset: 0;
+background: linear-gradient(180deg, alpha(#000,.35), alpha(#000,.65));
+}

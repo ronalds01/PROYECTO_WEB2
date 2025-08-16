@@ -1,0 +1,93 @@
+@charset "UTF-8";
+/* scss/index.scss (maestro) */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: #111;
+}
+
+.rc-hero {
+  position: relative;
+  min-height: 86vh;
+  background: radial-gradient(100% 100% at 50% 0%, rgba(181, 36, 79, 0.15), transparent 60%), linear-gradient(120deg, rgba(229, 177, 0, 0.12), transparent 40%), #1a1a1a url("../assets/imagenes/hero/hero.jpg") center/cover no-repeat;
+}
+
+.rc-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.65));
+}
+
+.navbar-brand span {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+}
+
+footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.rc-divisor {
+  background: linear-gradient(135deg, #b5244f, #e5b100);
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+}
+
+/* Footer con sello (un solo bloque) */
+.rc-footer {
+  position: relative;
+  overflow: hidden;
+}
+
+.rc-footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../assets/imagenes/brand/logoRC.png"); 
+  background-repeat: no-repeat;
+  background-position: 28% center; 
+  background-size: clamp(180px, 30vw, 360px); 
+  opacity: 0.1;
+  filter: grayscale(1) saturate(0) invert(1) brightness(1.1);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.rc-footer > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Logo visible del footer (centrado) */
+.footer-logo {
+  display: inline-block;
+  height: 72px; 
+  width: auto; 
+  -o-object-fit: contain;
+     object-fit: contain; 
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.35));
+}
+
+.rc-card {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  border: 0;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.rc-icon-card {
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.rc-icon {
+  font-size: 2rem;
+}
+

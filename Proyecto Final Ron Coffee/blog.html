@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog</title>
+
+  <!-- Favicón -->
+  <link rel="icon" type="image/png" href="assets/icons/faviconRC.png">
+  <link rel="icon" type="image/png" sizes="16x16"  href="assets/icons/favicon-16.png?v=1">
+  <link rel="icon" type="image/png" sizes="32x32"  href="assets/icons/favicon-32.png?v=1">
+  <link rel="icon" type="image/png" sizes="48x48"  href="assets/icons/favicon-48.png?v=1">
+  <link rel="icon" type="image/png" sizes="64x64"  href="assets/icons/favicon-64.png?v=1">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/favicon-180.png?v=1">
+  <link rel="shortcut icon" type="image/png" href="assets/icons/favicon-32.png?v=1">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap y estilos -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/reglas.css">
+
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <img src="assets/imagenes/brand/logoRC.png" alt="Ron Coffee" height="40">
+      <span>Ron Coffee</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navRC">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navRC">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="menu.html" id="menuDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Menú
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="menuDropdown">
+            <li><a class="dropdown-item" href="menu.html#opciones">Opciones</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
+        <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link" href="evento.html">Eventos</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="mt-5 pt-5">
+  <section class="container py-5">
+    <h1 class="mb-4">Blog</h1>
+
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Cómo preparar un espresso perfecto
+        <span class="badge bg-warning text-dark">Nuevo</span>
+      </li>
+      <li class="list-group-item">Origen: Tarrazú vs. Nariño</li>
+      <li class="list-group-item">Guía rápida de métodos de filtrado</li>
+    </ul>
+
+    <button type="button" class="btn btn-outline-dark mt-4"
+            data-bs-toggle="popover" data-bs-placement="right"
+            data-bs-content="Suscríbase para recibir recetas semanales.">
+      Info suscripción
+    </button>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white py-5 rc-footer">
+  <div class="container text-center">
+    <img src="assets/imagenes/brand/logoRC.png" alt="Ron Coffee" class="footer-logo mb-3">
+    <p class="m-0">&copy; 2025 Ron Coffee. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 900, once: true });
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+  [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>
